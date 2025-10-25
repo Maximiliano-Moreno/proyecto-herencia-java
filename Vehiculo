@@ -1,0 +1,31 @@
+/**
+ * Clase base que representa un vehículo genérico
+ * Demuestra el concepto de herencia en Java
+ */
+public class Vehiculo {
+    protected String marca;
+    protected String modelo;
+    protected int año;
+
+    // Constructor de la clase base
+    public Vehiculo(String marca, String modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+    }
+
+    // Método que puede ser sobrescrito por las subclases
+    public void arrancar() {
+        System.out.println("El vehículo está arrancando.");
+    }
+
+    // Método heredado por todas las subclases
+    public void detener() {
+        System.out.println("El vehículo se ha detenido.");
+    }
+
+    // Método para mostrar información común
+    public void mostrarInfo() {
+        System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Año: " + año);
+    }
+}
