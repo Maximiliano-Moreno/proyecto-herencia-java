@@ -1,0 +1,29 @@
+/**
+ * Clase derivada Coche que hereda de Vehiculo
+ * Ejemplo de reutilización de código mediante herencia
+ */
+public class Coche extends Vehiculo {
+    private int numPuertas;
+
+    // Constructor que llama al constructor de la clase base
+    public Coche(String marca, String modelo, int año, int numPuertas) {
+        super(marca, modelo, año); // Reutilización del constructor padre
+        this.numPuertas = numPuertas;
+    }
+
+    // Método específico de la subclase Coche
+    public void abrirMaletero() {
+        System.out.println("Maletero del " + marca + " " + modelo + " abierto.");
+    }
+
+    // Sobrescritura del método de la clase base (polimorfismo)
+    @Override
+    public void arrancar() {
+        System.out.println("El coche " + marca + " " + modelo + " arranca con llave.");
+    }
+
+    // Método adicional exclusivo de esta subclase
+    public void mostrarPuertas() {
+        System.out.println("Número de puertas: " + numPuertas);
+    }
+}
