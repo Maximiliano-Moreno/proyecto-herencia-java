@@ -1,0 +1,37 @@
+/**
+ * Clase principal para probar la implementación de herencia
+ * Demuestra la creación de objetos y uso de métodos heredados y sobrescritos
+ */
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== DEMOSTRACIÓN DE HERENCIA EN JAVA ===");
+        System.out.println("Proyecto: Sistema de Vehículos con Herencia\n");
+        
+        // Crear instancia de Coche (subclase de Vehiculo)
+        Coche miCoche = new Coche("Toyota", "Corolla", 2022, 4);
+        System.out.println("--- Probando Clase Coche ---");
+        miCoche.mostrarInfo();    // Método heredado de Vehiculo
+        miCoche.mostrarPuertas(); // Método específico de Coche
+        miCoche.arrancar();       // Método sobrescrito (polimorfismo)
+        miCoche.abrirMaletero();  // Método exclusivo de Coche
+        miCoche.detener();        // Método heredado sin cambios
+
+        System.out.println("\n----------------------------");
+
+        // Crear instancia de Motocicleta (subclase de Vehiculo)
+        Motocicleta miMoto = new Motocicleta("Yamaha", "MT-07", 2023, 689);
+        System.out.println("--- Probando Clase Motocicleta ---");
+        miMoto.mostrarInfo();     // Método heredado de Vehiculo
+        miMoto.mostrarCilindrada(); // Método específico de Motocicleta
+        miMoto.arrancar();        // Método sobrescrito (comportamiento diferente)
+        miMoto.hacerCaballito();  // Método exclusivo de Motocicleta
+        miMoto.detener();         // Método heredado sin cambios
+
+        System.out.println("\n=== PRUEBA COMPLETADA EXITOSAMENTE ===");
+        System.out.println("Conceptos demostrados:");
+        System.out.println("✅ Herencia (extends)");
+        System.out.println("✅ Reutilización de código (super)");
+        System.out.println("✅ Polimorfismo (@Override)");
+        System.out.println("✅ Encapsulamiento (protected/private)");
+    }
+}
