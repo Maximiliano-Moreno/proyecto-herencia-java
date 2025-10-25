@@ -1,0 +1,29 @@
+/**
+ * Clase derivada Motocicleta que hereda de Vehiculo
+ * Demuestra herencia con atributos y métodos específicos
+ */
+public class Motocicleta extends Vehiculo {
+    private int cilindrada;
+
+    // Constructor que reutiliza el constructor de Vehiculo
+    public Motocicleta(String marca, String modelo, int año, int cilindrada) {
+        super(marca, modelo, año);
+        this.cilindrada = cilindrada;
+    }
+
+    // Método exclusivo de la subclase Motocicleta
+    public void hacerCaballito() {
+        System.out.println("La motocicleta " + marca + " hace un caballito!");
+    }
+
+    // Sobrescritura del método arrancar (comportamiento diferente)
+    @Override
+    public void arrancar() {
+        System.out.println("La moto " + marca + " " + modelo + " arranca con patada.");
+    }
+
+    // Método específico para mostrar atributo único
+    public void mostrarCilindrada() {
+        System.out.println("Cilindrada: " + cilindrada + " cc");
+    }
+}
